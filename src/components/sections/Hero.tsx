@@ -106,9 +106,6 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="transition-colors hover:text-accent-600 dark:hover:text-accent-400"
-                onClick={(e) => {
-                  if (personal.socials.linkedin === '#') e.preventDefault();
-                }}
               >
                 <Linkedin className="h-4 w-4" />
               </a>

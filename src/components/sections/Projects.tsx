@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import { projects } from '@/data/portfolio';
 import { scaleIn } from '@/lib/animations';
@@ -24,26 +24,9 @@ export default function Projects() {
               viewport={{ once: true, margin: '-60px' }}
               className="card card-hover group flex flex-col p-6 sm:p-7"
             >
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-display text-lg font-bold leading-snug text-navy-900 dark:text-white">
-                  {project.title}
-                </h3>
-                <div className="flex shrink-0 gap-1.5">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.title}`}
-                    onClick={(e) => {
-                      if (project.demo === '#') e.preventDefault();
-                    }}
-                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-navy-200 text-navy-500 transition-colors hover:border-accent-500 hover:text-accent-600 dark:border-navy-700 dark:text-navy-400 dark:hover:border-accent-500/60 dark:hover:text-accent-400"
-                    title="View Project"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
+              <h3 className="font-display text-lg font-bold leading-snug text-navy-900 dark:text-white">
+                {project.title}
+              </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-navy-600 dark:text-navy-300">
                 {project.description}

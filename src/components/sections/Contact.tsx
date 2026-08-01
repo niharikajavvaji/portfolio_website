@@ -96,9 +96,6 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  onClick={(e) => {
-                    if (personal.socials.linkedin === '#') e.preventDefault();
-                  }}
                   className="flex h-12 w-12 items-center justify-center rounded-xl border border-navy-200 text-navy-600 transition-colors hover:border-accent-500 hover:text-accent-600 dark:border-navy-700 dark:text-navy-300 dark:hover:border-accent-500/60 dark:hover:text-accent-400"
                 >
                   <Linkedin className="h-5 w-5" />
