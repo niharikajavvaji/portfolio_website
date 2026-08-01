@@ -47,7 +47,7 @@ export default function Contact() {
           >
             <motion.div variants={fadeInUp} className="card p-8 sm:p-10 text-center">
               <span className="text-xs font-semibold uppercase tracking-wider text-accent-600 dark:text-accent-400">
-                Contact
+                Get In Touch
               </span>
               <h2 className="mt-2 font-display text-2xl font-bold text-navy-900 dark:text-white sm:text-3xl">
                 {contactHeading}

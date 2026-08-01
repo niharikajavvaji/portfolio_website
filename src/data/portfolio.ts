@@ -22,7 +22,6 @@ export const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Education', href: '#education' },
   { label: 'Certifications', href: '#certifications' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 export const stats = [
@@ -56,8 +55,6 @@ export interface Project {
   description: string;
   technologies: string[];
   features: string[];
-  github: string;
-  demo: string;
 }
 
 export const projects: Project[] = [
@@ -80,8 +77,6 @@ export const projects: Project[] = [
       'Enterprise knowledge access',
       'Faster information discovery',
     ],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'AI-Powered Regulatory and Tax Compliance Assistant',
@@ -104,8 +99,6 @@ export const projects: Project[] = [
       'Hallucination prevention',
       'Explainable AI responses',
     ],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'LLM-Powered Retail Sales Analytics Chatbot',
@@ -125,8 +118,6 @@ export const projects: Project[] = [
       'Promotional campaign evaluation',
       'Business-friendly analytics interface',
     ],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'BERT-Based Abstractive Text Summarization',
@@ -146,8 +137,6 @@ export const projects: Project[] = [
       'ROUGE-based performance evaluation',
       'Context-aware summary generation',
     ],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'Dog Emotion Recognition Using MobileNet',
@@ -168,8 +157,6 @@ export const projects: Project[] = [
       'Transfer learning',
       'Potential real-time pet monitoring',
     ],
-    github: '#',
-    demo: '#',
   },
   {
     title: 'Hourly Traffic Volume Forecasting System',
@@ -189,8 +176,6 @@ export const projects: Project[] = [
       'RMSE and MAE evaluation',
       'Smart city integration potential',
     ],
-    github: '#',
-    demo: '#',
   },
 ];
 
