@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@/context/ThemeContext';
 import Navbar from '@/components/Navbar';
 import BackToTop from '@/components/BackToTop';
-import Footer from '@/components/Footer';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
@@ -26,7 +25,6 @@ export default function App() {
           <Certifications />
           <Contact />
         </main>
-        <Footer />
         <BackToTop />
       </div>
     </ThemeProvider>

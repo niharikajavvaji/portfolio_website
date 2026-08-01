@@ -5,7 +5,6 @@ import {
   MapPin,
   Linkedin,
 } from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
 import {
   contactHeading,
   contactDescription,
@@ -38,9 +37,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section-pad">
       <div className="section-container">
-        <SectionHeading eyebrow="Contact" title={contactHeading} description={contactDescription} />
-
-        <div className="mt-14 max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -49,14 +46,17 @@ export default function Contact() {
             className="w-full"
           >
             <motion.div variants={fadeInUp} className="card p-8 sm:p-10 text-center">
-              <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white">
-                Get in Touch
-              </h3>
-              <p className="mt-2 text-sm text-navy-600 dark:text-navy-400">
-                Reach out through any channel below.
+              <span className="text-xs font-semibold uppercase tracking-wider text-accent-600 dark:text-accent-400">
+                Contact
+              </span>
+              <h2 className="mt-2 font-display text-2xl font-bold text-navy-900 dark:text-white sm:text-3xl">
+                {contactHeading}
+              </h2>
+              <p className="mt-3 text-sm text-navy-600 dark:text-navy-300 leading-relaxed">
+                {contactDescription}
               </p>
 
-              <ul className="mt-8 space-y-5 text-left max-w-md mx-auto">
+              <ul className="mt-8 space-y-4 text-left max-w-md mx-auto">
                 {contactItems.map((item) => {
                   const inner = (
                     <>
