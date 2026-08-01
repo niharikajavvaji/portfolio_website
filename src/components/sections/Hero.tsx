@@ -4,8 +4,18 @@ import { personal } from '@/data/portfolio';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 export default function Hero() {
-  const scrollTo = (href: string) =>
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (href: string) => {
+    const el = document.querySelector(href) as HTMLElement | null;
+    if (el) {
+      const headerOffset = 64;
+      const targetTop = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - headerOffset);
+      try {
+        window.scrollTo({ top: targetTop, behavior: 'smooth' });
+      } catch {
+        window.scrollTo(0, targetTop);
+      }
+    }
+  };
 
   return (
     <section id="home" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">

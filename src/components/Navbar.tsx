@@ -32,7 +32,22 @@ export default function Navbar() {
 
   const handleNav = (href: string) => {
     setOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      if (href === '#home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const el = document.querySelector(href) as HTMLElement | null;
+      if (el) {
+        const headerOffset = 64;
+        const targetTop = Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - headerOffset);
+        try {
+          window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        } catch {
+          window.scrollTo(0, targetTop);
+        }
+      }
+    }, 50);
   };
 
   return (
