@@ -7,7 +7,7 @@ export const personal = {
   location: 'Hyderabad, India',
   email: 'niharikajavvaji5@gmail.com',
   phone: '+91 8340863874',
-  resumeUrl: './Niharika_Javvaji_Resume.pdf',
+  resumeUrl: './Niharika_Javvaji_Resume_Latest.pdf?v=2',
   socials: {
     linkedin: 'https://www.linkedin.com/in/niharika-javvaji-10b656193?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     github: '#',
