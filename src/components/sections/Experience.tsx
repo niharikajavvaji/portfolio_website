@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Briefcase, MapPin, Building2, User } from 'lucide-react';
+import { Briefcase, MapPin, Building2, FolderKanban } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import { experience } from '@/data/portfolio';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
@@ -55,33 +55,46 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  {job.client && (
-                    <div className="flex items-start gap-2 rounded-lg bg-navy-50 px-3 py-2 text-sm dark:bg-navy-800/50">
-                      <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-navy-400" />
-                      <span className="text-navy-600 dark:text-navy-300">
-                        Client: <span className="font-medium">{job.client}</span>
-                      </span>
-                    </div>
-                  )}
-                  {job.project && (
-                    <div className={`flex items-start gap-2 rounded-lg bg-navy-50 px-3 py-2 text-sm dark:bg-navy-800/50 ${!job.client ? 'sm:col-span-2' : ''}`}>
-                      <User className="mt-0.5 h-4 w-4 shrink-0 text-navy-400" />
-                      <span className="text-navy-600 dark:text-navy-300">
-                        Project: <span className="font-medium">{job.project}</span>
-                      </span>
-                    </div>
-                  )}
-                </div>
+                {job.client && (
+                  <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-navy-50 px-3.5 py-2 text-sm dark:bg-navy-800/50">
+                    <Building2 className="h-4 w-4 shrink-0 text-navy-400" />
+                    <span className="text-navy-600 dark:text-navy-300">
+                      Client: <span className="font-medium">{job.client}</span>
+                    </span>
+                  </div>
+                )}
 
-                <ul className="mt-5 space-y-3">
-                  {job.points.map((point, i) => (
-                    <li key={i} className="flex gap-3 text-sm leading-relaxed text-navy-700 dark:text-navy-300 sm:text-base">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" />
-                      <span>{point}</span>
-                    </li>
+                <div className="mt-6 space-y-8">
+                  {job.projects.map((proj, pIdx) => (
+                    <div
+                      key={pIdx}
+                      className={
+                        pIdx > 0
+                          ? 'border-t border-navy-200/70 pt-6 dark:border-navy-700/60'
+                          : ''
+                      }
+                    >
+                      <div className="flex items-center gap-2">
+                        <FolderKanban className="h-4 w-4 shrink-0 text-accent-600 dark:text-accent-400" />
+                        <h4 className="font-display text-base font-bold text-navy-900 dark:text-white">
+                          {proj.title}
+                        </h4>
+                      </div>
+
+                      <ul className="mt-3 space-y-3">
+                        {proj.points.map((point, i) => (
+                          <li
+                            key={i}
+                            className="flex gap-3 text-sm leading-relaxed text-navy-700 dark:text-navy-300 sm:text-base"
+                          >
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </motion.div>
             </motion.div>
           ))}

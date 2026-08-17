@@ -31,32 +31,46 @@ export const stats = [
   { value: '300 to 400', label: 'Statements Processed per Minute' },
 ];
 
-export const experience = [
+export interface ExperienceProject {
+  title: string;
+  points: string[];
+}
+
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  location: string;
+  duration: string;
+  client?: string;
+  projects: ExperienceProject[];
+}
+
+export const experience: ExperienceItem[] = [
   {
     company: 'Capgemini Technology Services Pvt. Ltd.',
     role: 'Software Engineer',
     location: 'Hyderabad, India',
     duration: 'December 2022 to Present',
     client: 'RBC',
-    project: 'Credit Risk Scoring',
-    points: [
-      'Designed credit risk scoring models using bank statement, credit bureau, and Days Past Due (DPD) data to accurately assess customer creditworthiness.',
-      'Optimized a high-throughput scoring pipeline processing 300–400 bank statements per minute, reducing end-to-end runtime by 10%.',
-      'Built and enhanced Savings Account (SA) and Current Account (CA) scoring models, improving ROC-AUC by up to 14% and Gini coefficient by up to 17% through feature engineering and model optimization.',
-      'Developed a New-to-Credit (NTC) machine learning model using alternative financial and transaction data, achieving a ROC-AUC of 0.82 and Gini coefficient of 0.64, while supporting model validation, model deployment, and data pipeline optimization.',
-    ],
-  },
-  {
-    company: 'Capgemini Technology Services Pvt. Ltd.',
-    role: 'Software Engineer',
-    location: 'Hyderabad, India',
-    duration: 'December 2022 to Present',
-    project: 'LLM-Powered Enterprise Document Intelligence System',
-    points: [
-      'Contributed to an LLM-powered Enterprise Knowledge Assistant using RAG, LangChain, Gemini, ChromaDB, and Hugging Face embeddings for intelligent enterprise document search and Q&A.',
-      'Collaborated with senior engineers on the AI architecture and end-to-end RAG pipeline, including document ingestion, chunking, embeddings, vector storage, retrieval, and response generation.',
-      'Implemented semantic search, contextual retrieval, and reranking to improve the relevance of information provided to the LLM.',
-      'Added source citations, hallucination prevention, prompt engineering, and response validation to improve answer reliability, traceability, and factual grounding.',
+    projects: [
+      {
+        title: 'Credit Risk Scoring',
+        points: [
+          'Designed credit risk scoring models using bank statement, credit bureau, and Days Past Due (DPD) data to accurately assess customer creditworthiness.',
+          'Optimized a high-throughput scoring pipeline processing 300–400 bank statements per minute, reducing end-to-end runtime by 10%.',
+          'Built and enhanced Savings Account (SA) and Current Account (CA) scoring models, improving ROC-AUC by up to 14% and Gini coefficient by up to 17% through feature engineering and model optimization.',
+          'Developed a New-to-Credit (NTC) machine learning model using alternative financial and transaction data, achieving a ROC-AUC of 0.82 and Gini coefficient of 0.64, while supporting model validation, model deployment, and data pipeline optimization.',
+        ],
+      },
+      {
+        title: 'LLM-Powered Enterprise Document Intelligence System',
+        points: [
+          'Contributed to an LLM-powered Enterprise Knowledge Assistant using RAG, LangChain, Gemini, ChromaDB, and Hugging Face embeddings for intelligent enterprise document search and Q&A.',
+          'Collaborated with senior engineers on the AI architecture and end-to-end RAG pipeline, including document ingestion, chunking, embeddings, vector storage, retrieval, and response generation.',
+          'Implemented semantic search, contextual retrieval, and reranking to improve the relevance of information provided to the LLM.',
+          'Added source citations, hallucination prevention, prompt engineering, and response validation to improve answer reliability, traceability, and factual grounding.',
+        ],
+      },
     ],
   },
 ];
