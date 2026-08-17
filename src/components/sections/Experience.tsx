@@ -56,18 +56,22 @@ export default function Experience() {
                 </div>
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  <div className="flex items-start gap-2 rounded-lg bg-navy-50 px-3 py-2 text-sm dark:bg-navy-800/50">
-                    <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-navy-400" />
-                    <span className="text-navy-600 dark:text-navy-300">
-                      Client: <span className="font-medium">{job.client}</span>
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-2 rounded-lg bg-navy-50 px-3 py-2 text-sm dark:bg-navy-800/50">
-                    <User className="mt-0.5 h-4 w-4 shrink-0 text-navy-400" />
-                    <span className="text-navy-600 dark:text-navy-300">
-                      Project: <span className="font-medium">{job.project}</span>
-                    </span>
-                  </div>
+                  {job.client && (
+                    <div className="flex items-start gap-2 rounded-lg bg-navy-50 px-3 py-2 text-sm dark:bg-navy-800/50">
+                      <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-navy-400" />
+                      <span className="text-navy-600 dark:text-navy-300">
+                        Client: <span className="font-medium">{job.client}</span>
+                      </span>
+                    </div>
+                  )}
+                  {job.project && (
+                    <div className={`flex items-start gap-2 rounded-lg bg-navy-50 px-3 py-2 text-sm dark:bg-navy-800/50 ${!job.client ? 'sm:col-span-2' : ''}`}>
+                      <User className="mt-0.5 h-4 w-4 shrink-0 text-navy-400" />
+                      <span className="text-navy-600 dark:text-navy-300">
+                        Project: <span className="font-medium">{job.project}</span>
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <ul className="mt-5 space-y-3">

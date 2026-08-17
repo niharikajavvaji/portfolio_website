@@ -62,7 +62,7 @@ export default function Hero() {
             variants={fadeInUp}
             className="mt-5 text-base leading-relaxed text-navy-600 dark:text-navy-300 sm:text-lg"
           >
-            I&rsquo;m a Software Engineer with over three years of experience building scalable
+            I&rsquo;m a Software Engineer with over 3.8 years of experience building scalable
             Machine Learning, Deep Learning, Generative AI, and Agentic AI solutions.
           </motion.p>
 

@@ -25,7 +25,7 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: '3+', label: 'Years of Experience' },
+  { value: '3.8+', label: 'Years of Experience' },
   { value: '7+', label: 'AI and Machine Learning Projects' },
   { value: '14%', label: 'Improvement in ROC-AUC' },
   { value: '300 to 400', label: 'Statements Processed per Minute' },
@@ -40,12 +40,23 @@ export const experience = [
     client: 'RBC',
     project: 'Credit Risk Scoring',
     points: [
-      'Designed credit risk scoring models using bank statements, credit bureau information, and Days Past Due data to assess customer creditworthiness.',
-      'Optimized a high-throughput scoring pipeline capable of processing 300 to 400 bank statements per minute, reducing the end-to-end runtime by 10%.',
-      'Built and enhanced Savings Account and Current Account scoring models, improving ROC-AUC by up to 14% and the Gini coefficient by up to 17% through feature engineering and model optimization.',
-      'Developed a New-to-Credit machine learning model using alternative financial and transaction data, achieving a ROC-AUC of 0.82 and a Gini coefficient of 0.64.',
-      'Supported model validation, production deployment, and performance testing to ensure reliable credit risk predictions.',
-      'Collaborated with cross-functional teams to automate model deployment, optimize data pipelines, and deliver scalable, reliable, and production-ready solutions.',
+      'Designed credit risk scoring models using bank statement, credit bureau, and Days Past Due (DPD) data to accurately assess customer creditworthiness.',
+      'Optimized a high-throughput scoring pipeline processing 300–400 bank statements per minute, reducing end-to-end runtime by 10%.',
+      'Built and enhanced Savings Account (SA) and Current Account (CA) scoring models, improving ROC-AUC by up to 14% and Gini coefficient by up to 17% through feature engineering and model optimization.',
+      'Developed a New-to-Credit (NTC) machine learning model using alternative financial and transaction data, achieving a ROC-AUC of 0.82 and Gini coefficient of 0.64, while supporting model validation, model deployment, and data pipeline optimization.',
+    ],
+  },
+  {
+    company: 'Capgemini Technology Services Pvt. Ltd.',
+    role: 'Software Engineer',
+    location: 'Hyderabad, India',
+    duration: 'December 2022 to Present',
+    project: 'LLM-Powered Enterprise Document Intelligence System',
+    points: [
+      'Contributed to an LLM-powered Enterprise Knowledge Assistant using RAG, LangChain, Gemini, ChromaDB, and Hugging Face embeddings for intelligent enterprise document search and Q&A.',
+      'Collaborated with senior engineers on the AI architecture and end-to-end RAG pipeline, including document ingestion, chunking, embeddings, vector storage, retrieval, and response generation.',
+      'Implemented semantic search, contextual retrieval, and reranking to improve the relevance of information provided to the LLM.',
+      'Added source citations, hallucination prevention, prompt engineering, and response validation to improve answer reliability, traceability, and factual grounding.',
     ],
   },
 ];
@@ -58,26 +69,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    title: 'LLM-Powered Enterprise Document Intelligence System',
-    description:
-      'Developed an enterprise knowledge assistant using Retrieval-Augmented Generation to help employees quickly retrieve accurate information from internal documents through natural language questions. The system uses LangChain, Gemini, ChromaDB, and Hugging Face embeddings to retrieve relevant document content and generate contextual responses.',
-    technologies: [
-      'Python',
-      'LangChain',
-      'Gemini',
-      'ChromaDB',
-      'Hugging Face Embeddings',
-      'Retrieval-Augmented Generation',
-    ],
-    features: [
-      'Natural language document search',
-      'Semantic retrieval',
-      'Context-aware responses',
-      'Enterprise knowledge access',
-      'Faster information discovery',
-    ],
-  },
   {
     title: 'AI-Powered Regulatory and Tax Compliance Assistant',
     description:
@@ -120,6 +111,25 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Hourly Traffic Volume Forecasting System',
+    description:
+      'Developed an hourly time-series traffic forecasting model during an Uber mentor-led internship program. Engineered temporal features and tuned XGBoost and Scikit-learn models to predict junction traffic volume using historical traffic data. The model achieved a 15 to 20% reduction in forecasting error measured using RMSE and MAE. The solution can be integrated into smart city platforms to improve dynamic traffic signal timing and support real-time navigation rerouting.',
+    technologies: [
+      'Python',
+      'XGBoost',
+      'Scikit-learn',
+      'Time-Series Forecasting',
+      'Feature Engineering',
+    ],
+    features: [
+      'Hourly traffic volume prediction',
+      'Temporal feature engineering',
+      'XGBoost model tuning',
+      'RMSE and MAE evaluation',
+      'Smart city integration potential',
+    ],
+  },
+  {
     title: 'BERT-Based Abstractive Text Summarization',
     description:
       'Developed a Natural Language Processing application that generates concise and context-aware summaries using a BERT-based transformer model. Implemented text preprocessing, tokenization, model fine-tuning, and ROUGE-based evaluation. The application can condense lengthy reports, articles, and business documents into shorter and more readable summaries.',
@@ -156,25 +166,6 @@ export const projects: Project[] = [
       'Data augmentation',
       'Transfer learning',
       'Potential real-time pet monitoring',
-    ],
-  },
-  {
-    title: 'Hourly Traffic Volume Forecasting System',
-    description:
-      'Developed an hourly time-series traffic forecasting model during an Uber mentor-led internship program. Engineered temporal features and tuned XGBoost and Scikit-learn models to predict junction traffic volume using historical traffic data. The model achieved a 15 to 20% reduction in forecasting error measured using RMSE and MAE. The solution can be integrated into smart city platforms to improve dynamic traffic signal timing and support real-time navigation rerouting.',
-    technologies: [
-      'Python',
-      'XGBoost',
-      'Scikit-learn',
-      'Time-Series Forecasting',
-      'Feature Engineering',
-    ],
-    features: [
-      'Hourly traffic volume prediction',
-      'Temporal feature engineering',
-      'XGBoost model tuning',
-      'RMSE and MAE evaluation',
-      'Smart city integration potential',
     ],
   },
 ];
@@ -291,7 +282,7 @@ export const certifications: Certification[] = [
 ];
 
 export const aboutParagraphs = [
-  'I am a Software Engineer with over three years of experience designing and deploying Machine Learning, Deep Learning, and Agentic AI solutions. My work focuses on developing intelligent systems that solve practical business problems and deliver measurable results.',
+  'I am a Software Engineer with over 3.8 years of experience designing and deploying Machine Learning, Deep Learning, and Agentic AI solutions. My work focuses on developing intelligent systems that solve practical business problems and deliver measurable results.',
   'I have hands-on experience with Python, SQL, Pandas, NumPy, Scikit-learn, LangChain, LangGraph, Retrieval-Augmented Generation, and modern AI development frameworks. I have worked on credit risk modeling, enterprise document intelligence, regulatory compliance assistants, retail analytics chatbots, computer vision systems, and time-series forecasting.',
   'I enjoy learning emerging AI technologies, collaborating with cross-functional teams, and turning complex ideas into scalable and dependable software solutions.',
 ];
